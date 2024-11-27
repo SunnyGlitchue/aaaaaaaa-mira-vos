@@ -38,16 +38,24 @@
     <button id="magicButton">hola</button>
     <div id="flashingText">Aaaaaaaaaaaaaaaa mira vos</div>
 
+    <!-- si no funciona es porque tu navegador es rependejo weon -->
+    <audio id="backgroundMusic" loop>
+        <source src="https://github.com/SunnyGlitchue/aaaaaaaa-mira-vos/raw/refs/heads/main/cancion.mp3" type="audio/mp3">
+        Perdon pero tu navegador esta bien qlero
+    </audio>
+    
     <script>
         const button = document.getElementById('magicButton');
         const flashingText = document.getElementById('flashingText');
+        const audio = document.getElementById('backgroundMusic');
         
         button.addEventListener('click', () => {
             // el boton se va fiufiu
             button.style.display = 'none';
             
-            // el texto hace la inversa
+            // el texto hace la inversa y reproduce la mierda
             flashingText.style.display = 'block';
+            audio.play();
             
             // el fondo flashea al igual que el epileptico de mrd
             let colors = ["red", "blue", "green", "yellow", "purple", "orange"];
