@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaaaaaaaaaaaaaa mira vos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .epilepsy-warning {
+            background: yellow;
+            padding: 10px;
+            font-size: 1.2em;
+            color: red;
+            font-weight: bold;
+        }
+        #flashingText {
+            font-size: 2em;
+            color: black;
+            display: none;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="epilepsy-warning">
+        ⚠️ Advertencia: no apto para flasheros
+    </div>
+    <h1>Clickea la cosa de abajo para flashear</h1>
+    <button id="magicButton">hola</button>
+    <div id="flashingText">Aaaaaaaaaaaaaaaa mira vos</div>
+
+    <script>
+        const button = document.getElementById('magicButton');
+        const flashingText = document.getElementById('flashingText');
+        
+        button.addEventListener('click', () => {
+            // el boton se va fiufiu
+            button.style.display = 'none';
+            
+            // el texto hace la inversa
+            flashingText.style.display = 'block';
+            
+            // el fondo flashea al igual que el epileptico de mrd
+            let colors = ["red", "blue", "green", "yellow", "purple", "orange"];
+            let i = 0;
+            setInterval(() => {
+                document.body.style.backgroundColor = colors[i];
+                i = (i + 1) % colors.length;
+            }, 200);
+        });
+    </script>
+</body>
+</html>
